@@ -1,0 +1,41 @@
+server:
+  port: 26461
+spring:
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    database: oracle
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 500
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    #下面为连接池相关配置
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: MyDataSource
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1 FROM DUAL
+  kafka:
+    consumer:
+      group-id: gd-customer
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+      WRITE_ENUMS_USING_TO_STRING: true
+      FAIL_ON_EMPTY_BEANS: false
+    default-property-inclusion: non_null
+    dateFormat: "yyyy/MM/dd HH:mm:ss"
+    deserialization:
+      READ_ENUMS_USING_TO_STRING: true
+      USE_BIG_DECIMAL_FOR_FLOATS: true
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+    jodaDateTimeFormat: "yyyy/MM/dd HH:mm:ss"
+    time-zone: GMT+8

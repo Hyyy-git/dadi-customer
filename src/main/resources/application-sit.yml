@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:oracle:thin:@//10.2.3.203:1521/R2TST16GPDB
+    username: gdbzdev
+    password: ccic1234
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 3
+  kafka:
+    consumer:
+      bootstrap-servers: 10.1.12.187:9092,10.1.12.188:9092,10.1.12.189:9092
+      enable-auto-commit: false
+    producer:
+      bootstrap-servers: 10.1.12.187:9092,10.1.12.188:9092,10.1.12.189:9092

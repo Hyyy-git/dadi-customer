@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    show-sql: false
+  datasource:
+    url: jdbc:oracle:thin:@//grdka.db.ccic-net.com.cn:1521/srvgdbz
+    username: gdbzbusi
+    password: ccic0803
+    hikari:
+      maximum-pool-size: 20
+  kafka:
+    consumer:
+      bootstrap-servers: 10.1.67.124:9092,10.1.67.125:9092,10.1.67.126:9092
+      enable-auto-commit: false
+    producer:
+      bootstrap-servers: 10.1.67.124:9092,10.1.67.125:9092,10.1.67.126:9092

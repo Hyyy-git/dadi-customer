@@ -1,0 +1,37 @@
+**/target/
+**/log/
+*.class
+*.log
+application-dev.yml
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+classes/
+vue/node_modules/
+LOG_DIR_IS_UNDEFINED/
+vue - 副本/
+vue/dist/
+web/node_modules/
+web/dist/
+web/.vscode/settings.json
